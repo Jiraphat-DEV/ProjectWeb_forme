@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  
+  //- img.logo(src='images/test-image.png' alt='My_Logo')
+  //- div= data
+  each val in data
+    
+    div=val[0].path_image
+    img(src=val[0].path_image alt='My_Logo')
+    video(width='400' controls='')
+      source(src=val[0].path_video type='video/mp4')
+      |   Your browser does not support HTML video.
+
+  //- img.logo(src='/AV/ABP/ABP-870/ABP-870.jpg' alt='My_Logo')
+  //- img.logo(src='/AV/ABP/ABP-933/ABP-933.jpg' alt='My_Logo')
+
